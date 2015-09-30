@@ -4,9 +4,7 @@
 	<property environment="env"/> 
 	<!-- Shows deploying code & running tests for code in directory -->
 	<target name="deployCode"> 
-		<sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="test1"> 
-		<runTest>TestClassName</runTest> 
-	</sf:deploy> 
+		<sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="test1" /> 
 	</target> <!-- Shows removing code; only succeeds if done after deployCode --> 
 	<target name="undeployCode"> 
 		<sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="removecodepkg"/> 
