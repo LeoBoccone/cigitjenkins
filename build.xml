@@ -9,9 +9,9 @@
 	</target> <!-- Shows removing code; only succeeds if done after deployCode --> 
 
 	<target name="deployRunAllTests">
-  		<sf:deploy username= "${sf.username}"
-            			password= "${sf.username}"
-            			serverurl= "${sf.serverurl}"
+  		<sf:deploy username="${sf.username}"
+            			password="${sf.password}"
+            			serverurl="${sf.serverurl}"
             			runAllTests="true"
             			logType="Detail"
             			deployRoot="src"/>
