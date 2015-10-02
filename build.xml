@@ -8,9 +8,19 @@
 		<sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="src" /> 
 	</target> <!-- Shows removing code; only succeeds if done after deployCode --> 
 
-	<target name="deployRunAllTests">
-  		<sf:deploy username="${sf.username}"
-            			password="${sf.password}"
+	<target name="deployCIRunAllTests">
+  		<sf:deploy username="${sf.ciusername}"
+            			password="${sf.cipassword}"
+            			serverurl="${sf.serverurl}"
+            			testLevel="RunLocalTests"
+				rollbackOnError="true"
+            			logType="Detail"
+            			deployRoot="src"/>
+ 	</target>
+
+	<target name="deploySITRunAllTests">
+  		<sf:deploy username="${sf.situsername}"
+            			password="${sf.sitpassword}"
             			serverurl="${sf.serverurl}"
             			testLevel="RunLocalTests"
 				rollbackOnError="true"
